@@ -59,7 +59,7 @@ def generate_prompt(age_option, query, task_type_option, number_of_words):
 
 
 def get_examples(age_option):
-    file = f"./marketing_campaign_app/examples/{age_option.lower()}.json"
+    file = f"./marketing_campaign_app/examples/{age_option.replace(" ", "").lower()}.json"
 
     data = []
     with open(file, 'r') as json_file:
